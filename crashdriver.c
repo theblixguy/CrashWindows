@@ -191,10 +191,6 @@ NTSTATUS DriverEntry(IN PDRIVER_OBJECT DriverObject,IN PUNICODE_STRING RegistryP
 	WCHAR dlBuf [] = L"\\DosDevices\\Crash";
 	UNICODE_STRING dlUnicodeStr;
 	PDEVICE_OBJECT intDev = NULL;
-	ULONG typeStart, startDemand;
-	RTL_QUERY_REGISTRY_TABLE Tblparam[2];
-	UNICODE_STRING regPath;
-	LARGE_INTEGER cTime;
 
 	RtlInitUnicodeString(&dnUnicodeStr, dnBuf);
 	status = IoCreateDevice(DriverObject, 0, &dnUnicodeStr, TYPE_DEVICE_CRASH, 0, TRUE, &intDev);
