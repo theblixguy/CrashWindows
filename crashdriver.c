@@ -2,7 +2,7 @@
 
 /*
 
-crashdriver.cpp
+crashdriver.c
 
 A tiny system driver that wreaks havoc in kernel mode
 
