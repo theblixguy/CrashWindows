@@ -79,7 +79,7 @@ VOID doBufferOverflow(VOID)
 VOID doStackOverflow(VOID)
 {
 	while (1) {
-	StackOverflow();
+	doStackOverflow();
 }
 }
 
