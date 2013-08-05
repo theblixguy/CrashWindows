@@ -55,7 +55,7 @@ VOID doHang(VOID)
 	for (x = 0; x < KeNumberProcessors; x++) {
 	KeInitializeDpc(&_hngDPC, doDPCHangRoutine, NULL);
 	KeSetTargetProcessorDpc(&_hngDPC, x);
-    KeInsertQueueDpc(&_hngDPC, NULL, NULL); }
+        KeInsertQueueDpc(&_hngDPC, NULL, NULL); }
 }
 
 
